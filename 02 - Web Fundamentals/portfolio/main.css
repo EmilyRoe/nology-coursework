@@ -60,7 +60,7 @@ header h2 {
   margin: 10px 0;
 }
 
-.image {
-  width: auto;
-  height: 60vh;
+.bg {
+  width: 100%;
+  z-index: 0;
 }
