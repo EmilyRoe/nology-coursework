@@ -86,15 +86,20 @@ header {
     justify-content: center;
     align-items: center;
 
+// I need to add space between intro heading and paragraph//
+
     h1 {
         color: $color-white;
         font-size: 30px;
         text-decoration: underline;
+        padding: 0 50px;
     }
 
     p {
         color: $color-white;
         font-size: 25px; 
         text-align: center;
+        margin: 50 100px;
+        padding: 0 50px;
     }
 }
