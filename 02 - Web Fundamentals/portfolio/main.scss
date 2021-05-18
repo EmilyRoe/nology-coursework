@@ -82,6 +82,19 @@ header {
     background-color: $color-primary;
     padding: 0 40px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    h1 {
+        color: $color-white;
+        font-size: 30px;
+        text-decoration: underline;
+    }
+
+    p {
+        color: $color-white;
+        font-size: 25px; 
+        text-align: center;
+    }
 }
