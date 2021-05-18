@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Playfair+Display&family=Source+Code+Pro&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Abel", sans-serif;
+  color: #333333;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+nav {
+  height: 10vh;
+  background-color: #Fafafa;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 20px;
+  color: #333333;
+}
+
+.button {
+  display: block;
+  width: 100px;
+  background-color: #Fafafa;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px 20px;
+  color: #333333;
+}
+
+header {
+  height: 30vh;
+  background-color: #17353D;
+  padding: 0 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header div {
+  text-align: center;
+}
+header h1 {
+  color: #Fafafa;
+  font-size: 50px;
+  margin: 10px 0;
+}
+header h2 {
+  color: #Fafafa;
+  font-size: 50px;
+  margin: 10px 0;
+}
+
+.image {
+  width: auto;
+  height: 60vh;
+}

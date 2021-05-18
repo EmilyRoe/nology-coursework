@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Playfair+Display&family=Source+Code+Pro&display=swap');
+
+$font-body: "Abel", sans-serif;
+$font-display: "Source Code Pro", sans-serif;
+$font-logo: "Playfair Display", sans-serif;
+
+$color-primary: #17353D;
+$color-white: #Fafafa;
+$color-black: #333333;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-body;
+    color: $color-black;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+nav {
+    height: 10vh;
+    background-color: $color-white;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: $font-logo;
+    font-size: 20px;
+    color: $color-black;
+}
+
+.button {
+    display: block;
+    width: 100px;
+    background-color: $color-white;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px 20px;
+    color: $color-black;
+}
+
+header {
+    height: 30vh;
+    background-color: $color-primary;
+    padding: 0 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div {
+        text-align: center;
+    }
+
+    h1 {
+        color: $color-white;
+        font-size: 50px;
+        margin: 10px 0;
+    }
+
+    h2 {
+        color: $color-white;
+        font-size: 50px;
+        margin: 10px 0;
+    }
+}
+
+.image {
+    width: auto;
+    height: 60vh;
+}
