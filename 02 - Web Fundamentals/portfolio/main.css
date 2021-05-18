@@ -64,3 +64,12 @@ header h2 {
   width: 100%;
   z-index: 0;
 }
+
+.Introduction {
+  height: 30vh;
+  background-color: #17353D;
+  padding: 0 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
