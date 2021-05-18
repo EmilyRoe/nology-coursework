@@ -84,4 +84,18 @@ header h2 {
   color: #Fafafa;
   font-size: 25px;
   text-align: center;
+  margin: 50 100px;
+  padding: 0 50px;
+}
+
+.Projects {
+  height: 90vh;
+  background-color: #Fafafa;
+  padding: 0 60px;
+}
+.Projects h1 {
+  color: #333333;
+  font-size: 50px;
+  text-decoration: underline;
+  text-align: center;
 }
