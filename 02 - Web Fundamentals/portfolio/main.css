@@ -70,6 +70,18 @@ header h2 {
   background-color: #17353D;
   padding: 0 40px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.Introduction h1 {
+  color: #Fafafa;
+  font-size: 30px;
+  text-decoration: underline;
+  padding: 0 50px;
+}
+.Introduction p {
+  color: #Fafafa;
+  font-size: 25px;
+  text-align: center;
 }
