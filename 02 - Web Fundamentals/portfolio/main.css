@@ -13,6 +13,8 @@ a:visited {
 }
 
 nav {
+  position: sticky;
+  top: 0px;
   height: 10vh;
   background-color: #Fafafa;
   padding: 0 40px;
