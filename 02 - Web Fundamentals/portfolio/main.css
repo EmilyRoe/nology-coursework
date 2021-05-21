@@ -99,3 +99,11 @@ header h2 {
   text-decoration: underline;
   text-align: center;
 }
+
+.image {
+  width: 1440px;
+  height: 800px;
+  left: 0px;
+  top: 0px;
+  background: url(image.png);
+}
