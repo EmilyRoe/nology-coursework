@@ -48,6 +48,7 @@ nav {
     padding: 10px 20px;
     color: $color-black;
 }
+// I need to add formatt the button font//
 
 header {
     height: 30vh;
@@ -126,5 +127,37 @@ left: 0px;
 top: 0px;
 
 background: url(image.png);
-
 }
+
+// I need to change the positioning of this to use flexbox not absolute etc//
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+
+    h1 {
+        position: absolute;
+        bottom: 200px;
+        left: 75px;
+    }
+
+    h2 {
+        position: absolute;
+        bottom: 100px;
+        left: 75px;
+    }
+
+    h3 {
+        position: absolute;
+        bottom: 0px;
+        left: 75px;
+    }
+
+    h4 {
+        position: absolute;
+        bottom: -100px;
+        left: 75px;
+    }
+  }
