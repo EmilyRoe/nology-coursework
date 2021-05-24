@@ -111,12 +111,28 @@ header {
     height: 90vh;
     background-color: $color-white;
     padding: 0 60px;
+    width: 100%;
+    margin: 25px auto;
+    display: flex;
+    justify-content: space-between;
 
     h1 {
         color: $color-black;
         font-size: 50px;
         text-decoration: underline;
         text-align: center;
+    }
+
+    #left-panel {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #right-panel {
+        width: 50%;
+        padding: 15px;
     }
 }
 
@@ -160,4 +176,4 @@ background: url(image.png);
         bottom: -100px;
         left: 75px;
     }
-  }
+  }  
