@@ -6,7 +6,7 @@ nav {
     height: 10vh;
     width: auto;
     background-color: $color-white;
-    padding: 0 40px;
+    padding: 0 85px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,27 +37,26 @@ nav {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
+    background-color: $color-white;
+    min-width: 250px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
 
   .dropdown-content a {
-    color: black;
+    color: $color-black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
   }
 
-  /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+  /* Will need to add a modifier to make text in drop down menu smaller. */
 
-/* Show the dropdown menu on hover */
+.dropdown-content a:hover {background-color: $color-white;}
+
 .dropdown:hover .dropdown-content {display: block;}
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.dropdown:hover .dropbtn {background-color: $color-white;}
 
 header {
     height: 30vh;
