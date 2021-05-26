@@ -179,13 +179,21 @@ top: 0px;
 background: url(image.png);
 } 
 
-  .Skills {
+.Skills {
     background-color: $color-white;
     padding: 0 60px;
     width: 100%;
-  }
 
-  .About-Me {
+    #skills-heading {
+        display: flex;
+        color: $color-black;
+        font-size: 50px;
+        text-decoration: underline;
+        text-align: center;
+    }
+}
+
+.About-Me {
     height: 30vh;
     background-color: $color-primary;
     padding: 0 40px;
