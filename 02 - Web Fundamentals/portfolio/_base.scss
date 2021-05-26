@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Playfair+Display&family=Source+Code+Pro&display=swap');
+
+$font-body: "Abel", sans-serif;
+$font-display: "Source Code Pro", sans-serif;
+$font-logo: "Playfair Display", sans-serif;
+
+$color-primary: #17353D;
+$color-white: #Fafafa;
+$color-black: #333333;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-body;
+    color: $color-black;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+}
