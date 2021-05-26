@@ -4,6 +4,7 @@ nav {
     position: sticky;
     top: 0px;
     height: 10vh;
+    width: auto;
     background-color: $color-white;
     padding: 0 40px;
     display: flex;
@@ -67,8 +68,6 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-// I need to add space between intro heading and paragraph//
 
     h1 {
         color: $color-white;
