@@ -214,6 +214,27 @@ header {
         justify-content: center;
         text-align: center;
     }
+
+    
+    [class^="row"] {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    [class^="col"] {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 20px;
+            text-align: center;
+        }
+
+    img {
+        display: flex;
+        align-items: right;
+        padding: 50px 50px;
+
+    }
 }
 
 .image {
