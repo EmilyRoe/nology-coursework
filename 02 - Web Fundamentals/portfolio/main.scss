@@ -227,13 +227,22 @@ header {
             flex-direction: column;
             padding: 20px 20px;
             text-align: center;
+
+            #skills-para-1 {
+                padding: 20px 0px;
+                font-size: 20px;
+            }
+
+            .skills-para {
+                padding: 20px 0px;
+                font-family: $font-display;
+            }
         }
 
     img {
         display: flex;
         align-items: right;
         padding: 50px 50px;
-
     }
 }
 
