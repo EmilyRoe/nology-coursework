@@ -334,3 +334,15 @@ header {
       height: 300px;
       padding: 50px 50px;
   }
+
+  .contact__icons {
+      background-color: $color-primary;
+
+      .contact__icons-pic {
+          height: 50px;
+      }
+
+      .contact__icons-text {
+          color: $color-white;
+      }
+  }
