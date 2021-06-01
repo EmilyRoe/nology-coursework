@@ -327,22 +327,43 @@ header {
     background-color: $color-primary;
     padding: 0 40px;
     display: flex;
+    width: 100%;
 }
 
-  .contact__img {
-      border-radius: 50%;
-      height: 300px;
-      padding: 50px 50px;
-  }
+.footer__content {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  .contact__icons {
-      background-color: $color-primary;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: $font-body,sans-serif;
+            color: $color-white;
+        }
 
-      .contact__icons-pic {
-          height: 50px;
-      }
+        .contact__img {
+            display: inline-block;
+            border-radius: 50%;
+            height: 300px;
+            padding: 50px 50px;
+        }
 
-      .contact__icons-text {
-          color: $color-white;
-      }
-  }
+        .contact__info {
+            display: inline-block;
+
+                .contact__icons {
+                    background-color: $color-primary;
+
+                    .contact__icons-pic {
+                        height: 50px;
+                    }
+
+                    .contact__icons-text {
+                        color: $color-white;
+                    }
+                }
+        }
+}
