@@ -16,13 +16,7 @@ $color-black: #333333;
     color: $color-black;
 }
 
-a:link,
+* a:link,
 a:visited {
-    text-decoration: none;
-}
-
-a {color: $color-white}
-a:hover {
-    font-size: 50px;
-    color: $color-white;
+    text-decoration: none!important;
 }
