@@ -138,6 +138,12 @@ header {
     }
   } 
 
+  .menu a:hover {
+    font-size: 50px;
+    color: $color-white;
+    text-decoration: none!important;
+}
+
 .Introduction {
     height: 30vh;
     background-color: $color-primary;
