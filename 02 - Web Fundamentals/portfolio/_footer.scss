@@ -1,0 +1,49 @@
+.contact {
+    background-color: $color-primary;
+    padding: 0 40px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.footer__content {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: $font-body,sans-serif;
+            color: $color-white;
+        }
+
+        .contact__img {
+            display: inline-block;
+            border-radius: 50%;
+            height: 300px;
+            padding: 50px 50px;
+        }
+
+        .contact__info {
+            display: inline-block;
+            padding: 0px 50px;
+
+                .contact__icons {
+                    background-color: $color-primary;
+                    display: flex;
+
+                    .contact__icons-pic {
+                        height: 75px;
+                        padding: 10px 10px;
+                    }
+
+                    .contact__icons-text {
+                        color: $color-white;
+                        padding: 0px 10px;
+                    }
+                }
+        }
+}
