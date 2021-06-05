@@ -1,7 +1,7 @@
 .project {
-        background-color: $color-white;
-        padding: 0 60px;
-        width: 100%;
+    background-color: $color-white;
+    padding: 0 60px;
+    width: 100%;
 
     #project-heading {
         display: flex;
@@ -11,6 +11,32 @@
         justify-content: center;
         text-align: center;
     }
+        
+    [class^="row"] {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
+    [class^="col"] {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 20px;
+        text-align: center;
+
+        .project-titles {
+            padding: 75px 0px;
+            font-size: 20px;
+        }
+
+        .project-image {
+            display: flex;
+            width: 50%;
+            height: 250px;
+            border: 1px solid black;
+            justify-content: center;
+            align-items: center;
+        }
+    }
 
 }
