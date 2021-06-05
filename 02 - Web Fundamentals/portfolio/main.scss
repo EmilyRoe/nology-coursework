@@ -1,5 +1,6 @@
 @import "./base";
 @import "./nav";
+@import "./menu";
 
 header {
     height: 30vh;
@@ -29,64 +30,6 @@ header {
 .bg {
     width: 100%;
     z-index: 0;
-}
-
-.menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    flex-wrap: wrap;
-
-    h1 {
-        position: absolute;
-        bottom: 200px;
-        left: 75px;
-        color: $color-white;
-        text-decoration: underline;
-        text-shadow: 1px 1px 2px gray;
-        font-size: 40px;
-    }
-
-    h2 {
-        position: absolute;
-        bottom: 100px;
-        left: 75px;
-        color: $color-white;
-        text-decoration: underline;
-        text-shadow: 1px 1px 2px gray;
-        font-size: 40px;
-    }
-
-    h3 {
-        position: absolute;
-        bottom: 0px;
-        left: 75px;
-        color: $color-white;
-        text-decoration: underline;
-        text-shadow: 1px 1px 2px gray;
-        font-size: 40px;
-    }
-
-    h4 {
-        position: absolute;
-        bottom: -100px;
-        left: 75px;
-        color: $color-white;
-        text-decoration: underline;
-        text-shadow: 1px 1px 2px gray;
-        font-size: 40px;
-    }
-  } 
-
-  .menu a:link {
-      text-decoration: none;
-  }
-
-  .menu a:hover {
-    font-size: 50px;
-    color: $color-white;
-    text-decoration: none!important;
 }
 
 .Introduction {
