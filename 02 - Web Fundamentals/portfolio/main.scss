@@ -39,10 +39,10 @@ header {
 }
 
 .Introduction {
-    height: 30vh;
+    height: auto;
     width: 100%;
     background-color: $color-primary;
-    padding: 0 40px;
+    padding: 50px 70px;
     display: flex;
     flex-direction: column;
     justify-content: center;
