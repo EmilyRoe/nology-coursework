@@ -1,14 +1,16 @@
 .contact {
+    width: 100%;
+    display: flex;
     background-color: $color-primary;
     padding: 0 40px;
-    display: flex;
-    width: 100%;
     justify-content: center;
 }
 
 .footer__content {
     width: auto;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     justify-content: center;
     align-items: center;
 
