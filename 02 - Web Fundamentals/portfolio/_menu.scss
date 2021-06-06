@@ -1,6 +1,6 @@
 .menu {
     display: flex;
-    width: 100%;
+    width: 100%;  
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
@@ -55,4 +55,9 @@
     font-size: 50px;
     color: $color-white;
     text-decoration: none!important;
+}
+
+.bg {
+    width: 100%;
+    z-index: 0;
 }
