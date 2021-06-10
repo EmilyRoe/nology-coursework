@@ -1,5 +1,6 @@
 .menu {
     display: flex;
+    position: relative;
     width: 100%;  
     height: auto;
     flex-direction: column;
@@ -7,55 +8,26 @@
     text-align: center;
     flex-wrap: wrap;
 
-    h1 {
+    .menu-nav {
         position: absolute;
-        bottom: 200px;
-        left: 75px;
-        color: $color-white;
-        text-decoration: underline;
-        text-shadow: 1px 1px 2px gray;
-        font-size: 40px;
-    }
+        display: flex;
+        flex-direction: column;
+        width: 33%;
+        top: 15%;
 
-    h2 {
-        position: absolute;
-        bottom: 100px;
-        left: 75px;
-        color: $color-white;
-        text-decoration: underline;
-        text-shadow: 1px 1px 2px gray;
-        font-size: 40px;
+        a {
+            color: $color-white;
+            text-decoration: underline;
+            text-shadow: 1px 1px 2px gray;
+            font-size: 40px;
+            padding: 30px 0px;
+        }
     }
-
-    h3 {
-        position: absolute;
-        bottom: 0px;
-        left: 75px;
+ 
+    a:hover {
+        font-size: 50px;
         color: $color-white;
-        text-decoration: underline;
-        text-shadow: 1px 1px 2px gray;
-        font-size: 40px;
-    }
-
-    h4 {
-        position: absolute;
-        bottom: -100px;
-        left: 75px;
-        color: $color-white;
-        text-decoration: underline;
-        text-shadow: 1px 1px 2px gray;
-        font-size: 40px;
-    }
-  } 
-
-  .menu a:link {
-      text-decoration: none;
   }
-
-  .menu a:hover {
-    font-size: 50px;
-    color: $color-white;
-    text-decoration: none!important;
 }
 
 .bg {
