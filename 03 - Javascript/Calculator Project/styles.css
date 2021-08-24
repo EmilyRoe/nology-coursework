@@ -17,7 +17,7 @@
     border: 1px solid black;
 }
 
-.calculator__buttons { 
+button { 
     height: auto;
     background-color: #3ca9b8;
     border: 1px solid black;
