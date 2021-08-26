@@ -1,3 +1,32 @@
+header {
+    height: 30vh;
+    width: auto;
+    background-color:#17353D;
+    padding: 0 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .heading {
+        text-align: center;
+    }
+
+    h1 {
+        color: #Fafafa;
+        font-size: 50px;
+        margin: 10px 0px;
+        padding: 25px 0px;
+        text-decoration: underline;
+    }
+
+    h2 {
+        color: #Fafafa;
+        font-size: 30px;
+        margin: 10px 0;
+    }
+
+
 .calculator {
     display: grid;
     width: 33.3%;
