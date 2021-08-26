@@ -1,13 +1,3 @@
-// Thoughts on how to code this...
-
-// 1. You need to give each number it's value
-// i.e. <button>1</button> = 1
-
-// AC button code:
-//document.getElementById("clear-button").addEventListener("click", (event) => {
-  //  input.innerHTML = reset
-//});
-
 let currentNumber = "";
 let operator = "";
 let firstNumber = "";
@@ -30,7 +20,6 @@ operatorButton.forEach(button => {
     })
 })
 
-
 const numberButtons = document.querySelectorAll (".number-button")
 console.log(numberButtons)
 
@@ -48,5 +37,20 @@ equalsButton.addEventListener ("click", () => {
     if (operator == "+") {
         result = firstNumber + currentNumber
         display.innerHTML = result
+    } else if (operator == "-") {
+        result = firstNumber - currentNumber
+        display.innerHTML = result
+    } else if (operator == "x") {
+        result = firstNumber * currentNumber
+        display.innerHTML = result
+    } else if (operator == "/") {
+        result = firstNumber / currentNumber
+        display.innerHTML = result
     }
+})
+
+const clearButton = document.querySelector ("#clear-button")
+clearButton.addEventListener ("click", () => {
+    currentNumber = 0;
+    display.innerHTML = "";
 })
