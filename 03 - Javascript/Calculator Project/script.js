@@ -8,8 +8,28 @@
   //  input.innerHTML = reset
 //});
 
-// put operator variable here
-// Start with blank
+let currentNumber = "";
+let operator = "";
+let firstNumber = "";
+
+const operatorButton = document.querySelectorAll (".operator-button")
+operatorButton.forEach(button => {
+    button.addEventListener ("click", () => {
+        if (button.innerHTML == "+") { 
+            operator = "+";
+        } else if (button.innerHTML == "-") {
+            operator = "-";
+        } else if (button.innerHTML == "x") {
+            operator = "x";
+        } else if (button.innerHTML == "/") {
+            operator = "/";
+        }
+        firstNumber = currentNumber
+        currentNumber = "";
+        display.innerHTML = currentNumber
+    })
+})
+
 
 const numberButtons = document.querySelectorAll (".number-button")
 console.log(numberButtons)
@@ -17,21 +37,16 @@ console.log(numberButtons)
 const display = document.querySelector (".calculator__display")
 numberButtons.forEach(button => {
     button.addEventListener ("click", () => {
-        display.innerHTML = button.innerHTML
+       currentNumber = currentNumber+button.innerHTML
+        display.innerHTML = currentNumber
     })
 }) 
 
-
-
-
-
-
-// Focus first on the number buttons so they don't over write each time. 
-//You need to make a variable for buttons that are pressed so that each buttons adds 
-// Set innerHTML to the variable not button
-
-// Next step is operators
-// Repeat as above but you need a condition ie. if operator is == "+" 
-// Operator button also needs to clear screen
-
-// Later - the = button needs to know what to carry out
+const equalsButton = document.querySelector (".equals")
+console.log(equalsButton);
+equalsButton.addEventListener ("click", () => {
+    if (operator == "+") {
+        result = firstNumber + currentNumber
+        display.innerHTML = result
+    }
+})
