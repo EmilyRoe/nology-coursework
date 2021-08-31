@@ -35,22 +35,22 @@ const equalsButton = document.querySelector (".equals")
 console.log(equalsButton);
 equalsButton.addEventListener ("click", () => {
     if (operator == "+") {
-        result = firstNumber + currentNumber
+        result = parseInt(firstNumber) + parseInt(currentNumber)
         display.innerHTML = result
     } else if (operator == "-") {
-        result = firstNumber - currentNumber
+        result = parseInt(firstNumber) - parseInt(currentNumber)
         display.innerHTML = result
     } else if (operator == "x") {
-        result = firstNumber * currentNumber
+        result = parseInt(firstNumber) * parseInt(currentNumber)
         display.innerHTML = result
     } else if (operator == "/") {
-        result = firstNumber / currentNumber
+        result = parseInt(firstNumber) / parseInt(currentNumber)
         display.innerHTML = result
     }
 })
 
 const clearButton = document.querySelector ("#clear-button")
 clearButton.addEventListener ("click", () => {
-    currentNumber = 0;
+    currentNumber = "";
     display.innerHTML = "";
 })
