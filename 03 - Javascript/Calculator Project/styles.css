@@ -30,10 +30,11 @@ header {
 
 .calculator {
     display: grid;
-    width: 33.3%;
+    justify-content: center;
+    width: auto;
     height: auto;
-    padding: 20px;
-    margin: 20px;
+    padding: 20px 20px;
+    margin: 20px 500px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
@@ -70,6 +71,12 @@ button:hover{
 }
 
 .operator-button {
+    background-color: #BCD3D0;
+    color: white;
+    opacity: 0.75;
+}
+
+.equals {
     background-color: #BCD3D0;
     color: white;
     opacity: 0.75;
