@@ -9,5 +9,9 @@
 
 a:link,
 a:visited {
+  text-decoration: none !important;
+}
+
+a:hover {
   text-decoration: none;
 }

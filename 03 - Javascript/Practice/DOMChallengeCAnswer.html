@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap" rel="stylesheet" />
+    <style>
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "Poppins";
+      }
+      * {
+        font-family: "Lato";
+        margin: 10px 5px;
+      }
+      .active {
+        background-color: yellow;
+      }
+
+      .valid {
+        border: 10px solid green;
+      }
+      .invalid {
+        border: 10px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <!-- Welcome/Title -->
+      <section id="welcome">
+        <h1 id="welcome-title">Welcome to Nology Conference!</h1>
+        <p>Amazing talks from amazing people.</p>
+      </section>
+
+      <!-- Register your interest -->
+      <section id="contact">
+        <h3>Register your interest!</h3>
+        <form>
+          <div class="form-group">
+            <label class="form-label">Name</label>
+            <input class="form-input" onchange="handleInputChange(event)" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input class="form-input" />
+          </div>
+          <button onclick="handleRegister()">Send</button>
+        </form>
+      </section>
+
+      <section id="summary">
+        <h3>Summary</h2>
+        <ul id="summary-list"></ul>
+      </section>
+    </main>
+
+    <script defer>
+      let welcomeElement = document.getElementById("welcome-title");
+      welcomeElement.innerHTML = "Welcome to Nology Conference 2021!";
+      
+      let formInputs = document.getElementsByClassName("form-input");
+      formInputs[0].classList.add("active");
+
+      const handleRegister = () =>  {
+        alert("You have registered");
+      }
+
+      formInputs[0].addEventListener("input", (event) => {
+        let inputValue = event.target.value;
+
+        if (inputValue != undefined && inputValue.length > 0) {
+          event.target.classList.remove("invalid");
+          event.target.classList.add("valid");
+        } else {
+          event.target.classList.remove("valid");
+          event.target.classList.add("invalid");
+        }
+      })
+      
+      const summaryPoints = ["Intro", "SCSS", "Disco"];
+      const summaryList = document.getElementById("summary-list");
+      
+      const summaryPointsHTML = summaryPoints.map((summaryPoint) => {
+        return `<li>${summaryPoint}</li>`;
+      });
+
+      summaryList.innerHTML = summaryPointsHTML.join("");
+    </script>
+  </body>
+</html>

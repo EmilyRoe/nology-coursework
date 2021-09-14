@@ -12,15 +12,22 @@ a:visited {
   text-decoration: none;
 }
 
-nav {
+a:hover {
+  text-decoration: none;
+}
+
+.nav-bar {
   position: sticky;
   top: 0px;
   height: 10vh;
+  width: 100%;
   background-color: #Fafafa;
-  padding: 0 40px;
+  padding: 0 85px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 9999;
+  flex-wrap: nowrap;
 }
 
 .logo {
@@ -29,8 +36,7 @@ nav {
   color: #333333;
 }
 
-.button {
-  display: block;
+.dropbtn {
   width: 100px;
   background-color: #Fafafa;
   border: 1px solid black;
@@ -40,8 +46,290 @@ nav {
   color: #333333;
 }
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #Fafafa;
+  min-width: 250px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #333333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #Fafafa;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #Fafafa;
+}
+
+.menu {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.menu .menu-nav {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  top: 15%;
+}
+.menu .menu-nav a {
+  color: #Fafafa;
+  text-decoration: underline;
+  text-shadow: 1px 1px 2px gray;
+  font-size: 40px;
+  padding: 30px 0px;
+}
+.menu a:hover {
+  font-size: 50px;
+  color: #Fafafa;
+}
+
+.bg {
+  width: 100%;
+  z-index: 0;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.project {
+  background-color: #Fafafa;
+  padding: 0 60px;
+  width: 100%;
+}
+.project #projects-heading {
+  display: flex;
+  color: #333333;
+  font-size: 50px;
+  text-decoration: underline;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+.project [class^=row] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project [class^=col] {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.project [class^=col] .project-titles {
+  padding: 75px 0px;
+  font-size: 20px;
+}
+.project [class^=col] .project-image {
+  display: flex;
+  width: 50%;
+  height: 250px;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+}
+
+.Skills {
+  background-color: #Fafafa;
+  padding: 0 60px;
+  width: 100%;
+}
+.Skills #skills-heading {
+  display: flex;
+  color: #333333;
+  font-size: 50px;
+  text-decoration: underline;
+  justify-content: center;
+  text-align: center;
+}
+.Skills [class^=row] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Skills [class^=col] {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
+  text-align: center;
+}
+.Skills [class^=col] #skills-para-1 {
+  padding: 20px 0px;
+  font-size: 20px;
+}
+.Skills [class^=col] .skills-para {
+  padding: 20px 0px;
+  font-family: "Source Code Pro", sans-serif;
+}
+.Skills img {
+  display: flex;
+  align-items: right;
+  padding: 50px 50px;
+}
+
+.image {
+  position: relative;
+  width: 100%;
+}
+
+.image__img {
+  display: block;
+  width: 100%;
+}
+
+.image__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba 0, 0, 0, 0.6;
+  color: #Fafafa;
+  font-family: "Abel", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.image__overlay > * {
+  transform: translateY(20px);
+  transition: transform 0.5s;
+}
+
+.image__overlay:hover {
+  opacity: 1;
+}
+
+.image__overlay:hover > * {
+  transform: translateY(0px);
+}
+
+.image__title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #Fafafa;
+}
+
+.image__content {
+  font-size: 1.25em;
+  margin-top: 0.25em;
+  color: #Fafafa;
+  padding: 0px 25px;
+}
+
+.About-Me {
+  height: auto;
+  width: 100%;
+  background-color: #17353D;
+  padding: 50px 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.About-Me #about-me-heading {
+  color: #Fafafa;
+  font-size: 30px;
+  text-decoration: underline;
+  padding: 0 50px;
+}
+.About-Me p {
+  color: #Fafafa;
+  font-size: 25px;
+  text-align: center;
+  margin: 50 100px;
+  padding: 0 50px;
+}
+
+.contact {
+  width: 100%;
+  display: flex;
+  background-color: #17353D;
+  padding: 0 40px;
+  justify-content: center;
+}
+
+.footer__content {
+  width: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.footer__content * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Abel", sans-serif, sans-serif;
+  color: #Fafafa;
+}
+.footer__content .contact__img {
+  display: inline-block;
+  border-radius: 50%;
+  height: 300px;
+  padding: 50px 50px;
+}
+.footer__content .contact__info {
+  display: inline-block;
+  padding: 0px 50px;
+}
+.footer__content .contact__info .contact__icons {
+  background-color: #17353D;
+  display: flex;
+}
+.footer__content .contact__info .contact__icons .contact__icons-pic {
+  height: 75px;
+  padding: 10px 10px;
+}
+.footer__content .contact__info .contact__icons .contact__icons-text {
+  color: #Fafafa;
+  padding: 0px 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer__content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 650px) {
+  .footer__content {
+    grid-template-columns: 1fr;
+  }
+}
 header {
   height: 30vh;
+  width: 100%;
   background-color: #17353D;
   padding: 0 40px;
   display: flex;
@@ -62,15 +350,11 @@ header h2 {
   margin: 10px 0;
 }
 
-.bg {
-  width: 100%;
-  z-index: 0;
-}
-
 .Introduction {
-  height: 30vh;
+  height: auto;
+  width: 100%;
   background-color: #17353D;
-  padding: 0 40px;
+  padding: 50px 70px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -88,24 +372,4 @@ header h2 {
   text-align: center;
   margin: 50 100px;
   padding: 0 50px;
-}
-
-.Projects {
-  height: 90vh;
-  background-color: #Fafafa;
-  padding: 0 60px;
-}
-.Projects h1 {
-  color: #333333;
-  font-size: 50px;
-  text-decoration: underline;
-  text-align: center;
-}
-
-.image {
-  width: 1440px;
-  height: 800px;
-  left: 0px;
-  top: 0px;
-  background: url(image.png);
 }
