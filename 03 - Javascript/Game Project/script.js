@@ -16,19 +16,97 @@ const createGrid = () => {
     }
 }
 createGrid ()
-board[9].classList.add("box");
+board[8].classList.add("canvas");
 
 
-// // EVENT LISTENER TO REMOVE AVATAR FROM DIV AND RETURN ON A TIMER
+// Sprite - NOTE you need to move the sprite inside the game container... You also need to make it bigger
+// I've put a class in styles.css called .canvas but I just need to figure out how to get that to link to the sprite below.
+// I think I need to add in a line somewhere along the lines of: canvas = document.createElement('canvas');
+const SPRITE_WIDTH = 13;
+const SPRITE_HEIGHT = 14;
+const BORDER_WIDTH = 1;
+const SPACING_WIDTH = 1;
+
+function spritePositionToImagePosition(row, col) {
+    return {
+        x: (
+            BORDER_WIDTH +
+            col * (SPACING_WIDTH + SPRITE_WIDTH)
+        ),
+        y: (
+            BORDER_WIDTH +
+            row * (SPACING_WIDTH + SPRITE_HEIGHT)
+        )
+    }
+}
+
+var canvas = document
+            .querySelector('canvas');
+var context = canvas
+              .getContext('2d');
+
+var spriteSheetURL = 'https://codehs.com/uploads/e4cfb06e001bd92cf41139928e88819a';
+var image = new Image();
+image.src = spriteSheetURL;
+image.crossOrigin = true;
+
+var karelright0 = spritePositionToImagePosition(0, 0);
+var karelright1 = spritePositionToImagePosition(0, 1);
+var karelright2 = spritePositionToImagePosition(0, 2);
+var karelleft0 = spritePositionToImagePosition(1, 0);
+var karelleft1 = spritePositionToImagePosition(1, 1);
+var karelleft2 = spritePositionToImagePosition(1, 2);
+
+var walkCycle = [
+    karelright0,
+    karelright1,
+    karelright2,
+    karelright1,
+];
+
+var frameIndex = 0;
+var frame;
+function animate() {
+    if (frameIndex === walkCycle.length) {
+        frameIndex = 0;
+    }
+    frame = walkCycle[frameIndex];
+    context.clearRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+    context.drawImage(
+        image,
+        frame.x,
+        frame.y,
+        SPRITE_WIDTH,
+        SPRITE_HEIGHT,
+        0,
+        0,
+        SPRITE_WIDTH,
+        SPRITE_HEIGHT
+    );
+    frameIndex += 1;
+}
+
+image.onload = function() {
+    setInterval(animate, 500);
+};
+
+
+// EVENT LISTENER TO REMOVE AVATAR FROM DIV AND RETURN ON A TIMER
+// I think I need to add a line in here somewhere which removed the animation when in div 4
 window.addEventListener ("keyup", (e) => {
     if (e.keyCode == 38) {
-        board[9].classList.remove("box");
+        board[8].classList.remove("canvas");
         setTimeout( () => {
-            board[5].classList.add ("box")} ,1000);
+            board[4].classList.add ("canvas")} ,500);
         setTimeout( () => {
-            board[5].classList.remove ("box")} , 2000);
+            board[4].classList.remove ("canvas")} , 1000);
         setTimeout( () => {
-            board[9].classList.add ("box")} , 3000);
+            board[8].classList.add ("canvas")} , 1500);
     }
 })
 
