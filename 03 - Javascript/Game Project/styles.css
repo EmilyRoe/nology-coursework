@@ -39,12 +39,17 @@ header {
     height: 500px;
     width: 1250px;
     justify-content: center;
-    background-color: #2196F3;
+    background-color: #a3c9a8;
     padding: 10px 10px;
 }
 
 .background-1 {
-    background-color: #489fb5;
+    background-image: url('Screenshot\ 2021-09-13\ at\ 22.04.22.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    max-height: 100%;
+    /* background-color: #489fb5; */
     padding: 20px;
 }
 
@@ -61,4 +66,10 @@ header {
 .background-4 {
     background-color:#846c5b;
     padding: 20px;
+}
+
+.canvas {
+    background-color: black;
+    padding: 10px;
+    width: 10px;
 }
