@@ -1,6 +1,8 @@
-const container = document.querySelector(".game-container")
+const container = document.querySelector(".game-container");
+const canvas = document.querySelector('canvas');
 
 const board = []
+
 const createGrid = () => {
     for(let i = 0; i<16;i++){
         const grid = document.createElement('div');
@@ -17,11 +19,9 @@ const createGrid = () => {
 }
 createGrid ()
 board[8].classList.add("canvas");
+board[8].appendChild(canvas);
 
-
-// Sprite - NOTE you need to move the sprite inside the game container... You also need to make it bigger
-// I've put a class in styles.css called .canvas but I just need to figure out how to get that to link to the sprite below.
-// I think I need to add in a line somewhere along the lines of: canvas = document.createElement('canvas');
+// Sprite - NOTE you need to make the sprite bigger
 const SPRITE_WIDTH = 13;
 const SPRITE_HEIGHT = 14;
 const BORDER_WIDTH = 1;
@@ -40,8 +40,6 @@ function spritePositionToImagePosition(row, col) {
     }
 }
 
-var canvas = document
-            .querySelector('canvas');
 var context = canvas
               .getContext('2d');
 
@@ -95,18 +93,25 @@ image.onload = function() {
     setInterval(animate, 500);
 };
 
-
-// EVENT LISTENER TO REMOVE AVATAR FROM DIV AND RETURN ON A TIMER
-// I think I need to add a line in here somewhere which removed the animation when in div 4
+// I think I need to add a line in here somewhere which removes the animation when in div 4.
+// Need to make the jump flow...
 window.addEventListener ("keyup", (e) => {
-    if (e.keyCode == 38) {
+    if (e.key == 'ArrowUp') {
+        console.log(canvas);
+        board[8].removeChild(canvas);
         board[8].classList.remove("canvas");
         setTimeout( () => {
-            board[4].classList.add ("canvas")} ,500);
+            board[4].classList.add ("canvas");
+            board[4].appendChild(canvas);
+        } ,250);
         setTimeout( () => {
-            board[4].classList.remove ("canvas")} , 1000);
+            board[4].classList.remove ("canvas");
+            board[4].removeChild(canvas);
+        } , 500);
         setTimeout( () => {
-            board[8].classList.add ("canvas")} , 1500);
+            board[8].classList.add ("canvas");
+            board[8].appendChild(canvas);
+        } , 750);
     }
 })
 
