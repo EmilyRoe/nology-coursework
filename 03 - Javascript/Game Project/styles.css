@@ -85,7 +85,7 @@ h2 {
     height: 100px;
 }
 
-.background-1 {
+/* .background-1 {
     /* background-image: url('360_F_176015185_mPGNcaL7WygUCaaNWR5nhiC08H4tboBE.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -95,14 +95,14 @@ h2 {
     max-height: 100%;
     background-color: #489fb5;
     padding: 20px; */
-}
+/* } */
 
-.background-2 {
+/* .background-2 { */
     /* background-color: #82c0cc;
     padding: 20px; */
-}
+/* } */
 
-.background-3 {
+/* .background-3 { */
     /* background-image: url('pngwing.com.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -110,9 +110,9 @@ h2 {
     max-height: 100%;
     background-color: #a3c9a8;
     padding: 20px; */
-}
+/* } */
 
-.background-4 {
+/* .background-4 { */
     /* background-image: url('Screenshot\ 2021-09-15\ at\ 22.01.56.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -120,9 +120,9 @@ h2 {
     max-height: 100%;
     background-color:#846c5b;
     padding: 20px; */
-}
+/* } */ */
 
-.canvas {
+.canvas { 
     display: flex;
     align-items: center;
     padding: 10px;
