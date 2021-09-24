@@ -1,5 +1,8 @@
 const container = document.querySelector(".game-container");
 const canvas = document.querySelector('canvas');
+const skyBG = document.querySelector('.game__sky-bg');
+const treesBG = document.querySelector('.game__trees-bg');
+const groundBG = document.querySelector('.game__ground-bg');
 
 const board = []
 
@@ -12,11 +15,36 @@ const createGrid = () => {
             grid.classList.add("background-2")
         } else if (i < 12) {
             grid.classList.add("background-3")
-        } else grid.classList.add("background-4");
+        } else {
+            grid.classList.add("background-4");
+        }
+
+        const skyElements1 = document.querySelectorAll('.background-1');
+        const skyElements2 = document.querySelectorAll('.background-2')
+        const skyElements = [...skyElements1, ...skyElements2];
+        const treesElements = document.querySelectorAll('.background-3');
+        const groundElements = document.querySelectorAll('.background-4');
+
+        skyElements.forEach(el => {
+            skyBG.appendChild(el);
+        })
+        treesElements.forEach(el => {
+            treesBG.appendChild(el);
+        })
+        groundElements.forEach(el => {
+            groundBG.appendChild(el);
+        })
         container.appendChild(grid)
         board.push(grid)
     }
 }
+
+console.log(board);
+createGrid ()
+board[8].classList.add("canvas");
+board[8].appendChild(canvas);
+
+
 createGrid ()
 board[8].classList.add("canvas");
 board[8].appendChild(canvas);
@@ -115,18 +143,6 @@ window.addEventListener ("keyup", (e) => {
     }
 })
 
-// // Here you need to add an eventListener so that the avatar appears in the above div for x milliseconds
-// // OR does do you just add it in above...?
-// const jumpingAvatar = document.getElementById ("jumpingAvatar")
-// //Add in line to tell id to be hidden until key press
-// jumpingAvatar.style.display = 'block';
-// // Then add EventListener to appear x milliseconds after key press
-// jumpingAvatar.addEventListener ("keyUp", () => {
-//     if (keypress == "upArrow") {
-//         jumpingAvatar.style.display = 'show';
-//         setTimeout(jumpingAvatar(){jumpingAvatar.add()},1000);
-//     }
-// })
 
 // // NOTE: you need to figure out how to get the up arrow button to apply to the div and not the webpage as a whole 
 // // as it is currently functioning as a scroll
